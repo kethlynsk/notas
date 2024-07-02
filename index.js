@@ -2,9 +2,9 @@ let notas = [7.5, 8.0, 6.0, 9.5, 5.0, 8.5, 7.0, 10.0, 6.5, 9.0]
 let notaMaior = 0
 let notaMenor = notas[0]
 let notasAcimaMedia = 0
-let notaabaixoaMedia = 0
+let notasAbaixoMedia = 0
 
-function maiorNota(){
+function maiorNota(notaMaior){
     for (let i = 0; i < notas.length; i++) {
         if (notas[i] > notaMaior) {
             notaMaior = notas[i]
@@ -12,10 +12,10 @@ function maiorNota(){
         }
         return notaMaior
     }
-    console.log(maiorNota())
+    console.log("Maior nota: ", maiorNota(notaMaior))
 
 
-function menorNota(){
+function menorNota(notaMenor){
     for (let i = 0; i < notas.length; i++) {
         if (notas[i] < notaMenor) {
             notaMenor = notas[i]
@@ -23,25 +23,23 @@ function menorNota(){
         }
     return notaMenor
     }
-    console.log(menorNota())
+    console.log("Menor nota: ", menorNota(notaMenor))
 
-    function acima(){
+    function acima(notasAcimaMedia){
         for (let i = 0; i < notas.length; i++) {
-        if(notas[i] >= 6) {
-        console.log(notas[i])
+        if(notas[i] > 6) {
         notasAcimaMedia++
     }}
     return notasAcimaMedia
 }
-console.log(acima())
+console.log("Notas acima da média: ", acima(notasAcimaMedia))
 
-function abaixo(){
+function abaixo(notasAbaixoMedia){
     for (let i = 0; i < notas.length; i++) {
-    if(notas[i] <= 6) {
-    console.log(notas[i])
+    if(notas[i] < 6) {
     notasAbaixoMedia++
 }}
 return notasAbaixoMedia
 }
 
-console.log(abaixo())
+console.log("Notas abaixo da média: ", abaixo(notasAbaixoMedia))
